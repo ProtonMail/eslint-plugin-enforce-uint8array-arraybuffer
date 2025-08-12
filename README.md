@@ -17,9 +17,9 @@ Add the plugin and rule to your ESLint config:
 
 ```jsonc
 {
-  "plugins": ["enforce-uint8array-arraybuffer"],
+  "plugins": ["@protontech/enforce-uint8array-arraybuffer"],
   "rules": {
-    "enforce-uint8array-arraybuffer/enforce-uint8array-arraybuffer": "error"
+    "@protontech/enforce-uint8array-arraybuffer/enforce-uint8array-arraybuffer": "error"
   }
 }
 ```
