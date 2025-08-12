@@ -1,0 +1,42 @@
+{
+  "name": "@protontech/eslint-plugin-enforce-uint8array-arraybuffer",
+  "version": "1.0.0",
+  "description": "This plugin enforces any Uint8Array type declaration to explicitly define an ArrayBuffer as generic type",
+  "keywords": [
+    "eslint",
+    "typescript",
+    "typescrypt-eslint",
+    "uint8array",
+    "arraybuffer"
+  ],
+  "homepage": "https://github.com/ProtonMail/eslint-plugin-enforce-uint8array-arraybuffer#readme",
+  "bugs": {
+    "url": "https://github.com/ProtonMail/eslint-plugin-enforce-uint8array-arraybuffer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProtonMail/eslint-plugin-enforce-uint8array-arraybuffer.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "files": [
+    "src/"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^7.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/rule-tester": "^7.18.0",
+    "jest": "^29.7.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "typescript": "^5.9.2"
+  }
+}
