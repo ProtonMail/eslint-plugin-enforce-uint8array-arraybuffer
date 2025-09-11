@@ -1,15 +1,21 @@
-/* eslint-env es6 */
+import { RuleTester } from '@typescript-eslint/rule-tester';
+import * as test from 'node:test';
+import rule from '../src/rules/enforce-uint8array-arraybuffer.js';
+import tsParser from '@typescript-eslint/parser';  // import parser
 
-const { RuleTester } = require('@typescript-eslint/rule-tester');
-
-const rule = require('../src/rules/enforce-uint8array-arraybuffer');
+RuleTester.afterAll = test.after;
+RuleTester.describe = test.describe;
+RuleTester.it = test.it;
+RuleTester.itOnly = test.it.only;
 
 const ruleTester = new RuleTester({
-    parser: require.resolve('@typescript-eslint/parser'),
+  languageOptions: {
+    parser: tsParser,
     parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
+      ecmaVersion: 2020,
+      sourceType: 'module',
     },
+  },
 });
 
 ruleTester.run('enforce-uint8array-arraybuffer', rule, {
@@ -146,12 +152,12 @@ ruleTester.run('enforce-uint8array-arraybuffer', rule, {
         {
             code: `let a: Uint8Array<any>;`,
             errors: [{ messageId: 'wrongGeneric' }],
-            output: `let a: Uint8Array<any>;`, // manual fix/suppression required
+            // no output: manual fix/suppression required
         },
         {
             code: `type Nested = Readonly<Uint8Array<any>>;`,
             errors: [{ messageId: 'wrongGeneric' }],
-            output: `type Nested = Readonly<Uint8Array<any>>;`, // manual fix/suppression required
+            // no output: manual fix/suppression required
         },
     ],
 });

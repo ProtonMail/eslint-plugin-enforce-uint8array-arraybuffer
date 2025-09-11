@@ -1,5 +1,7 @@
-module.exports = {
+import enforceUint8ArrayArraybuffer from './rules/enforce-uint8array-arraybuffer';
+
+export default {
     rules: {
-        'enforce-uint8array-arraybuffer': require('./rules/enforce-uint8array-arraybuffer'),
+        'enforce-uint8array-arraybuffer': enforceUint8ArrayArraybuffer,
     },
 };

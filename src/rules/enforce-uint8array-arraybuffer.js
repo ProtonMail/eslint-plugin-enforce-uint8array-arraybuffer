@@ -1,5 +1,3 @@
-/* eslint-env es6 */
-
 /**
  * This plugin enforces any Uint8Array type declaration to explicitly define
  * an ArrayBuffer as generic type.
@@ -10,7 +8,7 @@
  *  - https://github.com/microsoft/TypeScript/pull/59417
  *  - https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/
  */
-module.exports = {
+export default {
     meta: {
         type: 'problem',
         fixable: 'code',
