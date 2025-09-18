@@ -1,4 +1,4 @@
-import enforceUint8ArrayArraybuffer from './rules/enforce-uint8array-arraybuffer';
+import enforceUint8ArrayArraybuffer from './rules/enforce-uint8array-arraybuffer.js';
 
 export default {
     rules: {

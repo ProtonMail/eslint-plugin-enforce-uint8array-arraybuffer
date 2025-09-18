@@ -10,7 +10,9 @@
  */
 export default {
     meta: {
+        /** @type {'problem'} */
         type: 'problem',
+        /** @type {'code'} */
         fixable: 'code',
         messages: {
             missingGeneric: 'Uint8Array must be used as Uint8Array<ArrayBuffer>.',
@@ -18,6 +20,7 @@ export default {
         },
         schema: [],
     },
+    defaultOptions: [],
     create(context) {
         /**
          * We need to catch all `Uint8Array` type references without an `<ArrayBuffer>` specifier.

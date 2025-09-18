@@ -1,3 +1,4 @@
+// @ts-check
 import { RuleTester } from '@typescript-eslint/rule-tester';
 import * as test from 'node:test';
 import rule from '../src/rules/enforce-uint8array-arraybuffer.js';
