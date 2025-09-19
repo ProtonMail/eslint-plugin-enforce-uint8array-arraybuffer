@@ -15,13 +15,17 @@ npm i --save-dev @protontech/eslint-plugin-enforce-uint8array-arraybuffer
 
 Add the plugin and rule to your ESLint config:
 
-```jsonc
-{
-  "plugins": ["@protontech/enforce-uint8array-arraybuffer"],
-  "rules": {
-    "@protontech/enforce-uint8array-arraybuffer/enforce-uint8array-arraybuffer": "error"
+```js
+import pluginEnforceUint8ArrayArrayBuffer from '@protontech/eslint-plugin-enforce-uint8array-arraybuffer';
+
+export default defineConfig({
+  plugins: {
+    '@protontech/enforce-uint8array-arraybuffer': pluginEnforceUint8ArrayArrayBuffer,
+  },
+  rules: {
+    '@protontech/enforce-uint8array-arraybuffer/enforce-uint8array-arraybuffer': 'error',
   }
-}
+})
 ```
 
 ## Example behavior
