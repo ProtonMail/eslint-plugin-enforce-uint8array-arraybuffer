@@ -1,5 +1,9 @@
 # eslint-plugin-enforce-uint8array-arraybuffer
 
+> REPO MIGRATION NOTICE: the lib code is now part of [Proton WebPackages](https://github.com/ProtonMail/WebPackages) .
+
+<hr>
+
 This ESLint rule enforces that any `Uint8Array` type declaration explicitly includes `<ArrayBuffer>` as its generic parameter.
 An auto-fix feature is also implemented.
 
